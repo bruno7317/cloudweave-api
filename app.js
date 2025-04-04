@@ -4,7 +4,7 @@ const app = express()
 const port = 8000
 
 app.get("/", (req, res) => {
-    res.send("Cloudweave API works.")
+    res.send("Cloudweave API works!")
 })
 
 app.listen(port, () => {
