@@ -1,0 +1,14 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Country {
+  id: ID!
+  name: String!
+  flag: String!
+  money_reserves: String!
+}
+
+type Query {
+  countries: [Country!]!
+}
