@@ -1,16 +1,20 @@
-import { ObjectType, Field, ID } from '@nestjs/graphql';
+import { ObjectType, Field, ID, Float, Int } from '@nestjs/graphql';
+import { CountryResource } from './country_resource.model';
 
 @ObjectType()
 export class Country {
   @Field(() => ID)
-  id: string;
+  id: number;
 
   @Field()
   name: string;
 
   @Field()
   flag: string;
+  
+  @Field(() => Float)
+  money_reserves: number;
 
-  @Field()
-  money_reserves: string;
+  @Field(() => [CountryResource], { nullable: true })
+  resources?: CountryResource[];
 }

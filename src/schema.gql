@@ -2,11 +2,24 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type Resource {
+  name: String!
+  base_price: Float!
+}
+
+type CountryResource {
+  stockpile: Int!
+  production: Int!
+  consumption: Int!
+  resource: Resource!
+}
+
 type Country {
   id: ID!
   name: String!
   flag: String!
-  money_reserves: String!
+  money_reserves: Float!
+  resources: [CountryResource!]
 }
 
 type Query {
