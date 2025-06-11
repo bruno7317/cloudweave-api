@@ -1,4 +1,4 @@
-import { ObjectType, Field, ID, Float, Int } from '@nestjs/graphql';
+import { ObjectType, Field, ID, Float } from '@nestjs/graphql';
 import { CountryResource } from './country_resource.model';
 
 @ObjectType()

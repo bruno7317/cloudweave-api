@@ -4,6 +4,7 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { CountryModule } from './country/country.module';
 import { join } from 'path';
 import { ResourceModule } from './resource/resource.module';
+import { EventModule } from './event/event.module';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { ResourceModule } from './resource/resource.module';
       autoSchemaFile: join(process.cwd(), 'src/schema.gql')
     }),
     CountryModule,
+    EventModule,
     ResourceModule
   ]
 })

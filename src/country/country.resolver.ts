@@ -1,7 +1,6 @@
 import { Resolver, Query, ResolveField, Parent } from '@nestjs/graphql';
 import { Country } from './models/country.model';
 import { CountryService } from './country.service';
-import { Inject } from '@nestjs/common';
 import { CountryResource } from './models/country_resource.model';
 
 @Resolver(() => Country)

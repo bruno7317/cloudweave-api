@@ -22,6 +22,27 @@ type Country {
   resources: [CountryResource!]
 }
 
+type Event {
+  turn: Int!
+  actor: String!
+  action: String!
+  resource: String!
+  quantity: Int!
+}
+
 type Query {
   countries: [Country!]!
+  events: [Event!]!
+}
+
+type Mutation {
+  addEvents(events: [EventInput!]!): Boolean!
+}
+
+input EventInput {
+  turn: Int!
+  actor: String!
+  action: String!
+  resource: String!
+  quantity: Int!
 }
